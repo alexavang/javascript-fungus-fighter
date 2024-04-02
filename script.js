@@ -9,6 +9,10 @@ function arcanescepter() {
     fungusHp = 0;
   }
 
+  if (attackPower < 0) {
+    attackPower = 0;
+  }
+
   renderHP();
   renderAP();
 }
@@ -19,6 +23,10 @@ function entangle() {
 
   if (fungusHp < 0) {
     fungusHp = 0;
+  }
+
+  if (attackPower < 0) {
+    attackPower = 0;
   }
 
   renderHP();
@@ -33,6 +41,10 @@ function dragonblade() {
     fungusHp = 0;
   }
 
+  if (attackPower < 0) {
+    attackPower = 0;
+  }
+
   renderHP();
   renderAP();
 }
@@ -45,19 +57,23 @@ function starfire() {
     fungusHp = 0;
   }
 
+  if (attackPower < 0) {
+    attackPower = 0;
+  }
+
   renderHP();
   renderAP();
 }
 
 function renderAP() {
-  let apValue = document.getElementById("ap-meter");
+  let apValue = document.getElementById("ap-txt");
   apValue.textContent = attackPower;
   let apMeter = document.getElementById("ap-meter");
   apMeter.value = attackPower;
 }
 
 function renderHP() {
-  let hpValue = document.getElementById("hp-meter");
+  let hpValue = document.getElementById("hp-txt");
   hpValue.textContent = fungusHp;
   let hpMeter = document.getElementById("hp-meter");
   hpMeter.value = fungusHp;
