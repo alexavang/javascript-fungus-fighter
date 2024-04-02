@@ -1,22 +1,64 @@
-// State Variables can be declared outside of the onReady
-// Feel free to make this to what you want!
-// Example:
-// let fungusHP = 100;
 let fungusHp = 100;
 let attackPower = 100;
 
-function onReady() {
-    console.log("Ready to go!")
-    
-    // Make sure you check the index.html file! 
-    // There are lots of buttons and things ready for you to hook into here!
-    
-    
-    // 🧠 Remember
-    // - Handle events that ->
-    // - Updates state which is ->
-    // - Rendered to the DOM
+function arcanescepter() {
+  fungusHp -= 14;
+  attackPower -= 12;
+
+  if (fungusHp < 0) {
+    fungusHp = 0;
+  }
+
+  renderHP();
+  renderAP();
 }
 
+function entangle() {
+  fungusHp -= 9;
+  attackPower -= 23;
 
-onReady()
+  if (fungusHp < 0) {
+    fungusHp = 0;
+  }
+
+  renderHP();
+  renderAP();
+}
+
+function dragonblade() {
+  fungusHp -= 47;
+  attackPower -= 38;
+
+  if (fungusHp < 0) {
+    fungusHp = 0;
+  }
+
+  renderHP();
+  renderAP();
+}
+
+function starfire() {
+  fungusHp -= 25;
+  attackPower -= 33;
+
+  if (fungusHp < 0) {
+    fungusHp = 0;
+  }
+
+  renderHP();
+  renderAP();
+}
+
+function renderAP() {
+  let apValue = document.getElementById("ap-meter");
+  apValue.textContent = attackPower;
+  let apMeter = document.getElementById("ap-meter");
+  apMeter.value = attackPower;
+}
+
+function renderHP() {
+  let hpValue = document.getElementById("hp-meter");
+  hpValue.textContent = fungusHp;
+  let hpMeter = document.getElementById("hp-meter");
+  hpMeter.value = fungusHp;
+}
