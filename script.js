@@ -2,6 +2,8 @@
 // Feel free to make this to what you want!
 // Example:
 // let fungusHP = 100;
+let fungusHp = 100;
+let attackPower = 100;
 
 function onReady() {
     console.log("Ready to go!")
